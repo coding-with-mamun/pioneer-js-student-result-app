@@ -217,7 +217,12 @@ const viewSingleStudent = (id) => {
 
   if (singleStudent) {
     localStorage.setItem("singleStudent", JSON.stringify(singleStudent));
-    window.location.href = "singleStudentData.html";
+
+    // Get the current URL
+    let baseURL = window.location.href;
+    baseURL = baseURL.substring(0, baseURL.lastIndexOf("/") + 1);
+    let redirectURL = baseURL + "singleStudentData.html";
+    window.location.href = redirectURL;
   } else {
     alert("No data Found");
   }

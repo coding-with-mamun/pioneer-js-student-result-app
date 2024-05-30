@@ -5,7 +5,11 @@ const mark_sheet_info = document.getElementById("mark_sheet_info");
 const searchData = JSON.parse(localStorage.getItem("searchData"));
 
 if (!searchData) {
-  window.location.href = "index.html";
+  // Get the current URL
+  let baseURL = window.location.href;
+  baseURL = baseURL.substring(0, baseURL.lastIndexOf("/") + 1);
+  let redirectURL = baseURL + "index.html";
+  window.location.href = redirectURL;
 }
 
 mark_sheet_info.innerHTML = `
@@ -149,6 +153,10 @@ const goBackToMainPage = () => {
   if (history.length > 1) {
     history.back();
   } else {
-    window.location.href = "./admin.html";
+    // Get the current URL
+    let baseURL = window.location.href;
+    baseURL = baseURL.substring(0, baseURL.lastIndexOf("/") + 1);
+    let redirectURL = baseURL + "admin.html";
+    window.location.href = redirectURL;
   }
 };

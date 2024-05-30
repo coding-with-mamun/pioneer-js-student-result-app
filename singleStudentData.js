@@ -17,7 +17,11 @@ for (let year = currentYear; year >= 1990; year--) {
 }
 const singleStudent = JSON.parse(localStorage.getItem("singleStudent"));
 if (!singleStudent) {
-  window.location.href = "admin.html";
+  // Get the current URL
+  let baseURL = window.location.href;
+  baseURL = baseURL.substring(0, baseURL.lastIndexOf("/") + 1);
+  let redirectURL = baseURL + "admin.html";
+  window.location.href = redirectURL;
 }
 
 // get single user
@@ -182,10 +186,12 @@ const updateStudentData = () => {
     singleUser.dateOfBarth;
 
   // Set select values
-  updateForm.querySelector('select[name="Institute"]').value = singleUser.Institute;
+  updateForm.querySelector('select[name="Institute"]').value =
+    singleUser.Institute;
   updateForm.querySelector('select[name="board"]').value = singleUser.board;
   updateForm.querySelector('select[name="year"]').value = singleUser.year;
-  updateForm.querySelector('select[name="examination"]').value = singleUser.examination;
+  updateForm.querySelector('select[name="examination"]').value =
+    singleUser.examination;
 
   // Set radio button values
   const groupRadioButtons = updateForm.querySelectorAll('input[name="group"]');
@@ -321,6 +327,10 @@ const goBackToMainPage = () => {
   if (history.length > 1) {
     history.back();
   } else {
-    window.location.href = "./admin.html";
+    // Get the current URL
+    let baseURL = window.location.href;
+    baseURL = baseURL.substring(0, baseURL.lastIndexOf("/") + 1);
+    let redirectURL = baseURL + "admin.html";
+    window.location.href = redirectURL;
   }
 };
