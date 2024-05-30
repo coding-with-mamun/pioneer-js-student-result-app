@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Arial, Helvetica;
+}
+
+li {
+  background-image: -webkit-linear-gradient(
+    90deg,
+    #33ca94ff,
+    #55c87bff,
+    #77c663ff,
+    #99c54aff,
+    #bbc331ff,
+    #ddc119ff,
+    #ffbf00ff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 100% center;
+  animation: textLoader 10s ease infinite reverse;
+  -webkit-animation: textLoader 10s ease infinite reverse;
+
+  list-style: none;
+}
+
+.edu_wraper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #eee;
+  padding: 5px 0px 5px 5px;
+
+  .edu_container {
+    background-color: #fff;
+    width: 650px;
+    margin: auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .edu_header {
+      display: flex;
+      gap: 2px;
+
+      .edu_head_img {
+        width: 26%;
+        background: #eeeeee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px 0 0 5px;
+
+        img {
+          width: 85px;
+        }
+      }
+
+      .edu_head_content {
+        background-color: #007814;
+        background-color: #007814;
+        border-radius: 0 5px 5px 0;
+
+        h3 {
+          font-family: Verdana, Arial, Helvetica, sans-serif;
+          font-size: 17px;
+          font-weight: 700;
+          margin-bottom: 0;
+        }
+
+        .edu_head_top {
+          background-image: url(http://www.educationboardresults.gov.bd/images/banner_flag.jpg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: right center;
+          height: 41px;
+          display: flex;
+          align-items: center;
+          padding-left: 5px;
+
+          h3 {
+            color: #95e17d;
+          }
+        }
+
+        .edu_head_body {
+          border-top: 1px solid #eeeeee4d;
+          padding-left: 5px;
+
+          h3 {
+            color: #fff;
+            padding: 5px 0;
+          }
+        }
+        .edu_head_footer {
+          height: 23px;
+          text-align: -webkit-right;
+          background: url(http://www.educationboardresults.gov.bd/images/bar_bk.jpg),
+            rgb(134 199 117 / 87%);
+          background-repeat: repeat-x;
+          border-top: 1px solid #fff;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          padding-right: 5px;
+
+          a {
+            font-size: 11px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+
+    .edu_body {
+      width: 74%;
+      margin: 16px auto 32px;
+      border: 1px solid #000;
+      padding: 26px 56px;
+
+      .result_form {
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          .form_fields_row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            label {
+              font-size: 12px;
+              color: #000000;
+              font-weight: bold;
+              width: 80px;
+            }
+
+            select,
+            input {
+              font-size: 12px;
+              color: #000000;
+              background-color: #f4f0f2;
+              border: 1px solid #999;
+              font-weight: normal;
+              width: 205px;
+              padding: 4px;
+              border-radius: 4px;
+            }
+          }
+
+          .form_button {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            padding-top: 4px;
+
+            button {
+              border: none;
+              font-size: 13.3333px;
+              border: 1px solid #999;
+              font-weight: 400;
+              padding: 1px 6px;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    .edu_footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #eee;
+      border-top: 5px solid #86c775;
+      padding: 15px 5px 15px 5px;
+      border-radius: 0 0 5px 5px;
+
+      -webkit-border-radius: 0 0 5px 5px;
+      -moz-border-radius: 0 0 5px 5px;
+      -ms-border-radius: 0 0 5px 5px;
+      -o-border-radius: 0 0 5px 5px;
+
+      p {
+        font-size: 10px;
+        color: #666666;
+        margin: 0;
+      }
+
+      .footer_right {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+/* ===========Student result page ================== */
+
+.edu_sheet {
+  padding-top: 15px;
+  .result_head {
+    h2 {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      padding: 15px 0;
+    }
+  }
+
+  .student_img {
+    display: flex;
+    align-items: center;
+    img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #eee;
+      padding: 10px;
+      margin-left: auto;
+      display: block;
+    }
+  }
+
+  .edu_student_info {
+    background-color: #eee;
+
+    table {
+      width: 100%;
+      tr {
+        width: 100%;
+
+        td {
+          font-size: 12px;
+          border: 1px solid #fff;
+          padding: 3px;
+
+          &:first-child {
+            width: 72px;
+          }
+          &:nth-child(2) {
+            width: 150px;
+          }
+          &:nth-child(3) {
+            width: 135px;
+          }
+          &:nth-child(4) {
+            width: calc(100% - 357px);
+          }
+        }
+      }
+    }
+  }
+
+  .edu_student_grade_sheet {
+    margin-bottom: 20px;
+    table {
+      width: 100%;
+      thead {
+        background-color: #afb7be;
+        th {
+          font-size: 12px;
+          padding: 3px;
+          text-align: left;
+        }
+      }
+      tbody {
+        tr {
+          background-color: #eee;
+          padding: 5px;
+          td {
+            font-size: 12px;
+            padding: 3px;
+
+            &:first-child {
+              width: 70px;
+            }
+            &:nth-child(2) {
+              width: 300px;
+            }
+          }
+          &:nth-child(even) {
+            background-color: #dee1e4;
+          }
+        }
+      }
+    }
+    a {
+      padding: 5px 0;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: blue;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}

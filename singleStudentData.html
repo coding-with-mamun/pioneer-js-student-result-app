@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="edu_wraper">
+      <div class="edu_container">
+        <div class="edu_header">
+          <div class="edu_head_img">
+            <img
+              src="http://www.educationboardresults.gov.bd/images/bd_logo.png"
+              alt=""
+            />
+          </div>
+          <div class="edu_head_content">
+            <div class="edu_head_top">
+              <h3>Ministry of Education</h3>
+            </div>
+            <div class="edu_head_body">
+              <h3>Intermediate and Secondary Education Boards Bangladesh</h3>
+            </div>
+            <div class="edu_head_footer">
+              <a href="#">Official Website of Education Board</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu_sheet" id="single_user_data"></div>
+
+        <div class="edu_footer">
+          <div class="footer_left">
+            <p>©2005-2024 Ministry of Education, All rights reserved.</p>
+          </div>
+          <div class="footer_right">
+            <p>Powered by</p>
+            <img
+              src="http://www.educationboardresults.gov.bd/images/tbl_logo.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Update student data modal -->
+
+    <div class="modal fade" id="studentDataUpdate">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Create new student</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="studentDataUpdateForm">
+              <div class="msg"></div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      name="name"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="fatherName" class="form-label"
+                      >Father's Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fatherName"
+                      name="fatherName"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="motherName" class="form-label"
+                      >Mother's Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="motherName"
+                      name="motherName"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="rollNo" class="form-label">Roll No</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="rollNo"
+                      name="rollNo"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="regNo" class="form-label">Reg No</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="regNo"
+                      name="regNo"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="dateOfBarth" class="form-label"
+                      >Date Of Barth</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="dateOfBarth"
+                      name="dateOfBarth"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="mb-3">
+                    <label for="Institute" class="form-label">Institute</label>
+                    <select class="form-select" name="Institute" id="Institute">
+                      <option selected disabled>-Select Institute-</option>
+                      <option value="DevZone">DevZone</option>
+                      <option value="NeooInc">Neoo Inc</option>
+                      <option value="VLab">VLab</option>
+                      <option value="PepploBD">PepploBD</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="board" class="form-label">Board</label>
+                    <select class="form-select" name="board" id="board">
+                      <option selected disabled>-Select One-</option>
+                      <option value="barisal">Barisal</option>
+                      <option value="chittagong">Chittagong</option>
+                      <option value="comilla">Comilla</option>
+                      <option value="dhaka">Dhaka</option>
+                      <option value="dinajpur">Dinajpur</option>
+                      <option value="jessore">Jessore</option>
+                      <option value="mymensingh">Mymensingh</option>
+                      <option value="rajshahi">Rajshahi</option>
+                      <option value="sylhet">Sylhet</option>
+                      <option value="madrasah">Madrasah</option>
+                      <option value="tec">Technical</option>
+                      <option value="dibs">DIBS(Dhaka)</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="year" class="form-label">Year</label>
+                    <select class="form-select" name="year" id="year">
+                      <option value="">Select Year</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="examination" class="form-label"
+                      >Examination</label
+                    >
+                    <select
+                      class="form-select"
+                      name="examination"
+                      id="examination"
+                    >
+                      <option value="HSC/Alim/Equivalent">
+                        HSC/Alim/Equivalent
+                      </option>
+                      <option value="JSC/JDC">JSC/JDC</option>
+                      <option value="SSC/Dakhil">SSC/Dakhil</option>
+                      <option value="SSC(Vocational)">SSC(Vocational)</option>
+                      <option value="HSC/Alim">HSC/Alim</option>
+                      <option value="HSC(Vocational)">HSC(Vocational)</option>
+                      <option value="HSC(BM)">HSC(BM)</option>
+                      <option value="Diploma in Commerce">
+                        Diploma in Commerce
+                      </option>
+                      <option value="Diploma in Business Studies">
+                        Diploma in Business Studies
+                      </option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label d-block">Group</label>
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="group"
+                        value="Science"
+                      />
+                      Science</label
+                    >
+
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="group"
+                        value="Arts"
+                      />
+                      Arts</label
+                    >
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label d-block">Type</label>
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="type"
+                        value="Regular"
+                      />
+                      Regular</label
+                    >
+
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="type"
+                        value="Arts"
+                      />
+                      Irregular</label
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="mb-3">
+                    <label for="Bangla" class="form-label">Bangla</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="Bangla"
+                      name="Bangla"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="English" class="form-label">English</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="English"
+                      name="English"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="Math" class="form-label">Math</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="Math"
+                      name="Math"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="SocialScience" class="form-label"
+                      >Social Science</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="SocialScience"
+                      name="SocialScience"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="Science" class="form-label">Science</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="Science"
+                      name="Science"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="Religion" class="form-label">Religion</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="Religion"
+                      name="Religion"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Update Data</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/functions.js"></script>
+    <script src="./assets/js/models.js"></script>
+    <script src="./singleStudentData.js"></script>
+  </body>
+</html>
